@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT World — Solutions & Services</title>
+  <meta name="description" content="IT World — Managed IT, Cloud, Security, DevOps, Consulting. Clean, responsive template with dark mode and animations." />
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2061ff; --glass: rgba(255,255,255,0.6);
+      --shadow: 0 8px 24px rgba(12,18,36,0.08);
+    }
+    [data-theme="dark"]{
+      --bg:#0b1020; --card:#0f1724; --muted:#98a0b3; --accent:#68a0ff; --glass: rgba(255,255,255,0.04);
+      --shadow: 0 8px 28px rgba(2,6,23,0.7);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg), #e9eefb 40%);
+      color: #0b1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      transition: background .3s, color .3s;
+    }
+    [data-theme="dark"] body{color:#e6eefc}
+
+    .container{max-width:1200px;margin:0 auto;padding:24px;}
+
+    /* Header (simple) */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+    .brand .logo{
+      width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#8ec5ff);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:800;box-shadow:var(--shadow);
+    }
+    .nav{display:flex;gap:14px;align-items:center}
+    .nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:var(--shadow)}
+    .toggle-btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px;border-radius:8px;cursor:pointer}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 480px;
+      gap:28px;
+      align-items:center;
+      margin:28px 0 40px;
+    }
+    .hero .eyebrow{font-size:13px;color:var(--muted);font-weight:600}
+    .hero h1{font-size:36px;margin:10px 0 8px;line-height:1.06}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .actions{display:flex;gap:12px;align-items:center}
+    .search-card{
+      display:flex;gap:8px;padding:8px;background:var(--card);border-radius:12px;box-shadow:var(--shadow);align-items:center;
+    }
+    .search-card input{border:0;padding:10px;outline:none;background:transparent;font-weight:600;color:inherit}
+
+    /* Globe visual */
+    .globe-card{
+      background:linear-gradient(180deg,var(--card),var(--glass));
+      border-radius:18px;padding:24px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+    }
+    .globe{
+      width:320px;height:320px;border-radius:50%;background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,0.12), transparent 10%),
+        conic-gradient(from 220deg, rgba(140,197,255,0.14), rgba(32,97,255,0.12));
+      position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+      filter:drop-shadow(0 10px 30px rgba(8,28,80,0.12));
+      animation:rotateGlobe 14s linear infinite;
+    }
+    .globe:after{
+      content:"";position:absolute;inset:0;border-radius:50%;background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 6%),
+      linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+      mix-blend-mode:overlay;
+    }
+    .orbit {
+      position:absolute;width:6px;height:6px;border-radius:50%;background:var(--accent);
+      box-shadow:0 0 12px rgba(32,97,255,0.6);
+    }
+    .orbit.orb1{top:20%;left:60%;animation:orbit1 10s linear infinite}
+    .orbit.orb2{top:60%;left:25%;animation:orbit2 8s linear infinite}
+    .orbit.orb3{top:48%;left:68%;animation:orbit3 12s linear infinite}
+
+    @keyframes rotateGlobe{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    @keyframes orbit1{0%{transform:translateY(0)}50%{transform:translateY(8px)}100%{transform:translateY(0)}}
+    @keyframes orbit2{0%{transform:translateX(0)}50%{transform:translateX(-8px)}100%{transform:translateX(0)}}
+    @keyframes orbit3{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+    /* Features / Services */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    .card h3{margin:8px 0;font-size:18px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Industries list */
+    .industries{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+    .industry{background:linear-gradient(180deg,var(--glass),transparent);padding:12px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);min-width:160px}
+
+    /* Partners slider */
+    .partners{overflow:hidden;padding:18px;border-radius:14px;background:var(--card);box-shadow:var(--shadow);margin:24px 0}
+    .partners .track{display:flex;gap:36px;align-items:center;animation:scroll 18s linear infinite}
+    .partners img{height:36px;opacity:0.92;filter:grayscale(0.04)}
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    /* Duplicate track for seamless loop */
+    .partners .track ~ .track{margin-left:36px}
+
+    /* FAQ/accordion */
+    .faq .item{border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .faq button{width:100%;text-align:left;padding:14px;background:var(--card);border:0;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow)}
+    .faq .panel{padding:12px 14px;background:linear-gradient(180deg,var(--glass),transparent);color:var(--muted)}
+
+    /* Contact */
+    .contact-row{display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:20px}
+    form .field{display:flex;flex-direction:column;margin-bottom:12px}
+    input[type="text"],input[type="email"],textarea{
+      padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;outline:none;color:inherit;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .error{color:#b91c1c;font-weight:700;font-size:13px;margin-top:6px;display:none}
+    .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+
+    footer{margin:48px 0 20px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr 360px}
+      .grid3{grid-template-columns:repeat(2,1fr)}
+      .contact-row{grid-template-columns:1fr}
+    }
+    @media (max-width:700px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .globe{width:260px;height:260px}
+      .grid3{grid-template-columns:1fr}
+      .nav{display:none}
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <div class="container">
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="logo">IW</div>
+        <div>
+          <div style="font-size:14px">IT World</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:600">Global IT Services</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button id="themeToggle" class="toggle-btn" title="Toggle dark mode">Dark</button>
+        <a class="cta" href="#contact">Get Started</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div>
+        <div class="eyebrow">Global IT • Managed Services • Cloud • Security</div>
+        <h1>We build, manage and secure the digital world</h1>
+        <p>From cloud migration and managed operations to security and DevOps — tailored IT solutions for enterprises, startups, and governments.</p>
+
+        <div class="actions" role="search" aria-label="Find service">
+          <div class="search-card" style="flex:1;min-width:220px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M21 21l-4.35-4.35" stroke="#0b1724" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="11" cy="11" r="6" stroke="#0b1724" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input id="search" placeholder="Search services or technologies (e.g., cloud, devops)" />
+            <button class="btn-primary" onclick="alert('Search feature demo')">Search</button>
+          </div>
+          <a class="cta" href="#services">View Services</a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted);font-size:14px">
+          <strong>Trusted by:</strong> AcmeTech • Nova Systems • FinSol • HealthGrid
+        </div>
+      </div>
+
+      <aside class="globe-card" aria-hidden>
+        <div class="globe" role="img" aria-label="Animated globe representing global IT">
+          <div class="orbit orb1"></div>
+          <div class="orbit orb2"></div>
+          <div class="orbit orb3"></div>
+          <!-- Subtle map dots (decorative) -->
+          <svg width="260" height="260" viewBox="0 0 260 260" style="transform:scale(1.02)">
+            <g fill="rgba(255,255,255,0.85)" opacity="0.9">
+              <circle cx="70" cy="70" r="2.6"/>
+              <circle cx="108" cy="60" r="2.6"/>
+              <circle cx="140" cy="85" r="2.6"/>
+              <circle cx="170" cy="60" r="2.6"/>
+              <circle cx="200" cy="110" r="2.6"/>
+              <circle cx="160" cy="140" r="2.6"/>
+              <circle cx="110" cy="150" r="2.6"/>
+              <circle cx="70" cy="160" r="2.6"/>
+              <circle cx="50" cy="120" r="2.6"/>
+            </g>
+          </svg>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading" style="margin:0 0 12px">Core Services</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Managed IT & Operations</h3>
+          <p class="muted">24/7 monitoring, ticketing, SLAs, and on-call support for critical infrastructure.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud Migration & Platform</h3>
+          <p class="muted">Public/private/hybrid cloud architecture, cost optimization, and automated deployments.</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity & Compliance</h3>
+          <p class="muted">Vulnerability assessments, monitoring, IAM, and compliance (ISO, GDPR, HIPAA).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries" aria-labelledby="industries-heading">
+      <h2 id="industries-heading" style="margin:12px 0">Industries We Serve</h2>
+      <div class="industries" role="list">
+        <div class="industry" role="listitem"><strong>Finance</strong><div class="muted">Fintech, banking systems, secure payments</div></div>
+        <div class="industry" role="listitem"><strong>Healthcare</strong><div class="muted">EMR, Telehealth, compliance</div></div>
+        <div class="industry" role="listitem"><strong>Retail</strong><div class="muted">eCommerce platforms, supply chain</div></div>
+        <div class="industry" role="listitem"><strong>Government</strong><div class="muted">Secure infrastructure & citizen services</div></div>
+        <div class="industry" role="listitem"><strong>Education</strong><div class="muted">LMS, remote learning, cloud labs</div></div>
+        <div class="industry" role="listitem"><strong>Manufacturing</strong><div class="muted">IoT, automation, data pipelines</div></div>
+      </div>
+    </section>
+
+    <!-- PARTNERS / SLIDER -->
+    <section id="partners" aria-labelledby="partners-heading">
+      <h2 id="partners-heading" style="margin:12px 0">Partner Ecosystem</h2>
+      <div class="partners" aria-hidden>
+        <div class="track" style="min-width:200%">
+          <img src="https://placehold.co/120x36?text=Azure" alt="Azure logo" />
+          <img src="https://placehold.co/120x36?text=AWS" alt="AWS logo" />
+          <img src="https://placehold.co/120x36?text=GCP" alt="GCP logo" />
+          <img src="https://placehold.co/120x36?text=RedHat" alt="RedHat logo" />
+          <img src="https://placehold.co/120x36?text=Docker" alt="Docker logo" />
+          <img src="https://placehold.co/120x36?text=Kubernetes" alt="Kubernetes logo" />
+          <!-- duplicated for seamless scroll -->
+          <img src="https://placehold.co/120x36?text=Azure" alt="Azure logo" />
+          <img src="https://placehold.co/120x36?text=AWS" alt="AWS logo" />
+          <img src="https://placehold.co/120x36?text=GCP" alt="GCP logo" />
+        </div>
+        <div class="track" aria-hidden>
+          <img src="https://placehold.co/120x36?text=FinSol" alt="FinSol" />
+          <img src="https://placehold.co/120x36?text=HealthGrid" alt="HealthGrid" />
+          <img src="https://placehold.co/120x36?text=Nova" alt="Nova Systems" />
+          <img src="https://placehold.co/120x36?text=Acme" alt="AcmeTech" />
+          <img src="https://placehold.co/120x36?text=PartnerX" alt="PartnerX" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-heading" style="margin-top:8px">
+      <h2 id="faq-heading">Frequently asked</h2>
+      <div class="item">
+        <button aria-expanded="false" class="acc-btn">How quickly can you onboard our infra?<span class="chev">+</span></button>
+        <div class="panel" hidden>Typical onboarding is 1–4 weeks depending on scope. We start with discovery and prioritized runbook creation.</div>
+      </div>
+      <div class="item">
+        <button aria-expanded="false" class="acc-btn">Do you manage cloud costs?</button>
+        <div class="panel" hidden>Yes. We provide cost reports, rightsizing, reserved instance strategies, and automated scaling to optimize spend.</div>
+      </div>
+      <div class="item">
+        <button aria-expanded="false" class="acc-btn">Can you help with compliance?</button>
+        <div class="panel" hidden>We support ISO, SOC2, GDPR and HIPAA readiness including audits, documentation, and remediation actions.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:22px" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Get in touch</h2>
+      <div class="contact-row">
+        <div>
+          <p class="muted">Tell us about your project and we'll recommend the right plan. Fields marked with * are required.</p>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" type="text" placeholder="Your full name" required />
+              <div class="error" id="err-name">Please fill your name</div>
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" type="email" placeholder="you@example.com" required />
+              <div class="error" id="err-email">Please enter a valid email</div>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" type="text" placeholder="Company name (optional)"/>
+            </div>
+            <div class="field">
+              <label for="message">Message *</label>
+              <textarea id="message" placeholder="Describe your project or need" required></textarea>
+              <div class="error" id="err-message">Please describe your project</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button type="submit" class="btn-primary">Send message</button>
+              <div class="muted" style="font-size:13px">or email <a href="mailto:hello@itworld.example">hello@itworld.example</a></div>
+            </div>
+          </form>
+        </div>
+
+        <aside style="background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);">
+          <h3 style="margin:0 0 8px">Office — Global HQ</h3>
+          <div class="muted">123 Cloud Way, Tech City</div>
+          <div style="margin-top:12px">
+            <strong>Phone</strong><div class="muted">+1 (555) 123-4567</div>
+            <strong style="margin-top:8px;display:block">Support</strong><div class="muted">support@itworld.example</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> IT World — Built with ❤️ for global teams.
+    </footer>
+  </div>
+
+  <script>
+    // dark mode toggle (persist in localStorage)
+    const body = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('itworld_theme') || 'light';
+    body.setAttribute('data-theme', saved);
+    themeBtn.textContent = saved === 'dark' ? 'Light' : 'Dark';
+    themeBtn.addEventListener('click', () => {
+      const next = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', next);
+      localStorage.setItem('itworld_theme', next);
+      themeBtn.textContent = next === 'dark' ? 'Light' : 'Dark';
+    });
+
+    // FAQ accordion behaviour
+    document.querySelectorAll('.acc-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const panel = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        btn.querySelector('.chev') && (btn.querySelector('.chev').textContent = expanded ? '+' : '−');
+        if(expanded){
+          panel.hidden = true;
+        } else {
+          panel.hidden = false;
+        }
+      });
+    });
+
+    // Simple contact form validation with "please fill" messages
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      let ok = true;
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+
+      // reset
+      document.querySelectorAll('.error').forEach(el=>el.style.display='none');
+
+      if(!name.value.trim()){
+        document.getElementById('err-name').style.display = 'block'; ok=false;
+      }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){
+        document.getElementById('err-email').style.display = 'block'; ok=false;
+      }
+      if(!message.value.trim()){
+        document.getElementById('err-message').style.display = 'block'; ok=false;
+      }
+
+      if(!ok){
+        // focus first error field
+        const firstErr = document.querySelector('.error[style*="block"]');
+        if(firstErr){
+          const field = firstErr.previousElementSibling;
+          field && field.focus();
+        }
+        return;
+      }
+
+      // demo success handling
+      alert('Thanks — message sent (demo). We will contact you soon.');
+      form.reset();
+    });
+
+    // Small UX: show current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accessibility: keyboard support for the globe (skip focus)
+    document.querySelectorAll('.globe, .orbit').forEach(el => el.setAttribute('tabindex','-1'));
+
+    // Partner track: pause animation on hover for accessibility
+    document.querySelectorAll('.partners').forEach(el=>{
+      el.addEventListener('mouseenter', ()=> el.querySelectorAll('.track').forEach(t=>t.style.animationPlayState='paused'));
+      el.addEventListener('mouseleave', ()=> el.querySelectorAll('.track').forEach(t=>t.style.animationPlayState='running'));
+    });
+  </script>
+</body>
+</html>

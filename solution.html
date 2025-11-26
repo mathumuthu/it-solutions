@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="solution.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+   <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home page2.html">Home page 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./pro&service.html">Product & Service</a></li>
+          <li><a href="./solution.html">Workstation</a></li>
+          <!-- <li><a href="./safety.html">support</a></li> -->
+          <!-- <li><a href="./trips.html">Learn</a></li> -->
+           <li><a href="./indu.html">IT Support Services</a></li> 
+         <li><a href="./dashoard.html">Dashboard</a></li>
+
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./contact.html'">Let's talk → </button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====== Workstation Section ====== -->
+<section id="workstations" style="padding:80px 50px; background-color:#f4f6f8; text-align:center;">
+  <h2 style="font-size:36px; margin-bottom:50px; color:#0d47a1;">Our IT Workstations</h2>
+
+  <div class="workstation-cards" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;">
+
+    <div class="workstation-card" style="background:white; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <img src="img6.webp" width="100px" height="220px" alt="Workstation 1" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <h3 style="font-size:22px; margin-bottom:10px; color:#0d47a1;">Cloud Development Setup</h3>
+      <p style="font-size:16px; color:#555;">Optimized workstation for cloud computing and software development.</p>
+    </div>
+
+    <div class="workstation-card" style="background:white; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <img src="img7.webp" width="80px" height="220px" alt="Workstation 2" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <h3 style="font-size:22px; margin-bottom:10px; color:#0d47a1;">Cybersecurity Lab</h3>
+      <p style="font-size:16px; color:#555;">High-performance workstation designed for security testing and monitoring.</p>
+    </div>
+
+    <div class="workstation-card" style="background:white; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <img src="img8 (2).webp" width="180px" alt="Workstation 3" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <h3 style="font-size:22px; margin-bottom:10px; color:#0d47a1;">Networking Setup</h3>
+      <p style="font-size:16px; color:#555;">Workstation equipped with advanced networking tools for enterprise IT solutions.</p>
+    </div>
+
+    <div class="workstation-card" style="background:white; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <img src="img4.webp" alt="Workstation 4" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <h3 style="font-size:22px; margin-bottom:10px; color:#0d47a1;">Software Development Hub</h3>
+      <p style="font-size:16px; color:#555;">Dedicated setup for efficient coding, debugging, and software deployment.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Simple hover animation for workstation cards
+  const cards = document.querySelectorAll('.workstation-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer class="it-footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3 class="footer-logo">STACKLY IT Solutions</h3>
+      <p>
+        Providing IT services, cloud solutions, cybersecurity and digital transformation for businesses worldwide.
+      </p>
+
+      <div class="footer-social">
+        <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">IT Consulting</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Cloud Migration</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Mobile Apps</a></li>
+        <li><a href="#">Cyber Security</a></li>
+        <li><a href="#">AI & Automation</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h4>Subscribe Newsletter</h4>
+
+      <p>Get latest IT updates and offers.</p>
+
+      <form class="footer-form" id="subscribeForm">
+  <input type="email" id="emailInput" placeholder="Enter your email" required>
+  <button type="submit" id="subscribeBtn">Subscribe</button>
+</form>
+
+<p id="errorMessage" style="color: #ff4e4e; font-size: 14px; margin-top: 5px; display: none;">
+  Please fill this field
+</p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TechNova IT Solutions. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="./solution.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

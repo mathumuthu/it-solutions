@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home page 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./partner.html">Partner Ships</a></li>
+          <li><a href="./solution.html">Industry</a></li>
+          <!-- <li><a href="./safety.html">support</a></li> -->
+          <!-- <li><a href="./trips.html">Learn</a></li> -->
+           <li><a href="./resource.html">Resources</a></li> 
+         <li><a href="./FAQ.html">FAQ's</a></li>
+
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./contact2.html'">Get in touch→ </button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =======================
+      FAQ SECTION – IT SOLUTIONS
+============================= -->
+<section class="faq-section">
+  <div class="faq-container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <p class="faq-subtitle">Find answers to common questions about our IT services.</p>
+
+    <div class="faq-items">
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-box">
+        <div class="faq-question">
+          <h3>What IT services do you provide?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            We offer cloud services, software development, network security,
+            IT support, data backup, and end-to-end digital transformation solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-box">
+        <div class="faq-question">
+          <h3>Do you provide 24/7 technical support?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Yes, our support team operates 24/7 to handle server issues,
+            downtime, cybersecurity alerts, and remote troubleshooting.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-box">
+        <div class="faq-question">
+          <h3>How secure are your IT solutions?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Our solutions follow industry-level encryption, firewall setups,
+            data monitoring, and advanced threat protection.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-box">
+        <div class="faq-question">
+          <h3>Do you offer custom software development?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Yes, we develop custom applications, websites, dashboards,
+            CRM/ERP systems, and mobile apps tailored to your business needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-box">
+        <div class="faq-question">
+          <h3>Can you migrate our data to the cloud?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Absolutely, we handle full cloud migration including AWS, Azure,
+            Google Cloud with zero-data-loss assurance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =======================
+      FAQ CSS
+============================= -->
+<style>
+.faq-section {
+  padding: 60px 0;
+  background: #f9fbff;
+}
+
+.faq-container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.faq-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  color: #0b3fa8;
+}
+
+.faq-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b3fa8;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+  margin-top: 10px;
+}
+
+.faq-box.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-box.active .faq-icon {
+  transform: rotate(45deg);
+}
+</style>
+
+<!-- =======================
+      FAQ JS
+============================= -->
+<script>
+const faqs = document.querySelectorAll(".faq-box");
+
+faqs.forEach(faq => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="it-footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3 class="footer-logo">STACKLY IT Solutions</h3>
+      <p>
+        Providing IT services, cloud solutions, cybersecurity and digital transformation for businesses worldwide.
+      </p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">IT Consulting</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Cloud Migration</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Mobile Apps</a></li>
+        <li><a href="#">Cyber Security</a></li>
+        <li><a href="#">AI & Automation</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h4>Subscribe Newsletter</h4>
+
+      <p>Get latest IT updates and offers.</p>
+
+      <form class="footer-form" id="subscribeForm">
+  <input type="email" id="emailInput" placeholder="Enter your email" required>
+  <button type="submit" id="subscribeBtn">Subscribe</button>
+</form>
+
+<p id="errorMessage" style="color: #ff4e4e; font-size: 14px; margin-top: 5px; display: none;">
+  Please fill this field
+</p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TechNova IT Solutions. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
