@@ -342,6 +342,11 @@ span{
 
 
 
+@media (max-width: 640px) {
+  .hero-buttons a {
+    width: 100%;
+  }
+}
 
 
 
